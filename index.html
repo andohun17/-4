@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 피팅</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>가상 안경/썬글라스 피팅</h1>
+    
+    <!-- 1. 카테고리 선택 -->
+    <div id="categorySelection">
+      <button id="glassesButton">안경 선택</button>
+      <button id="sunglassesButton">썬글라스 선택</button>
+    </div>
+
+    <!-- 2. 디자인 선택 -->
+    <div id="designSelection" style="display: none;">
+      <h2>디자인을 선택하세요</h2>
+      <div id="designsContainer"></div>
+      <button id="backButton">돌아가기</button>
+    </div>
+
+    <!-- 3. 카메라 화면 (디자인 선택 후에 나타남) -->
+    <video id="video" width="640" height="480" autoplay style="display: none;"></video>
+
+    <!-- 4. 실시간 피팅된 상품 -->
+    <canvas id="canvas" width="640" height="480"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
